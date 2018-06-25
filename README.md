@@ -32,10 +32,17 @@ Muhammad Mursalin Darmamawan / [@Alin](https://line.me/t/p/~muhmursalind)
 Fadhiil Rachman / [@fadhiilrachman](https://www.instagram.com/fadhiilrachman)
 
 apt update
+
 apt upgrade
+
 apt install python3 (yang bener -> python)
+
 apt install git
-git clone https://github.com/muhmursalind/helloworld
+
+git clone https://github.com/azmunaa/helloworld
+
 cd helloworld
+
 python3 -m pip install -r requirements.txt (yang bener -> python)
+
 python3 helloworld.py (yang bener -> python)
