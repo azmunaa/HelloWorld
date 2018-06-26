@@ -46,3 +46,5 @@ cd helloworld
 python3 -m pip install -r requirements.txt (yang bener -> python)
 
 python3 helloworld.py (yang bener -> python)
+
+Mid punya Az-Har: u698de1ab0835ab29bce6f44d6bf1d21f
