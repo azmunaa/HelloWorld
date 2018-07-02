@@ -275,7 +275,7 @@ def delete_log():
 def sendMention(to, text="", mids=[]):
     arrData = ""
     arr = []
-    mention = "@zeroxyuuki "
+    mention = "@az-harmn "
     if mids == []:
         raise Exception("Invalid mids")
     if "@!" in text:
@@ -391,7 +391,7 @@ def helpmessage():
                     "╠ " + key + "SearchMusic 「Search」" + "\n" + \
                     "╠ " + key + "SearchLyric 「Search」" + "\n" + \
                     "╠ " + key + "SearchImage 「Search」" + "\n" + \
-                    "╚══[ Copyright @Zero-Cool404 ]"
+                    "╚══[ Az-Har Muh. N ]"
     return helpMessage
 
 def helptexttospeech():
@@ -453,8 +453,8 @@ def helptexttospeech():
                         "╠ " + key + "uk : Ukrainian" + "\n" + \
                         "╠ " + key + "vi : Vietnamese" + "\n" + \
                         "╠ " + key + "cy : Welsh" + "\n" + \
-                        "╚══[ Copyright @Zero-Cool404 ]" + "\n" + "\n\n" + \
-                        "Contoh : " + key + "say-id Zero"
+                        "╚══[ Az-Har Muh. N ]" + "\n" + "\n\n" + \
+                        "Contoh : " + key + "say-id Az-Har"
     return helpTextToSpeech
 
 def helptranslate():
@@ -569,8 +569,8 @@ def helptranslate():
                     "╠ " + key + "zu : zulu" + "\n" + \
                     "╠ " + key + "fil : Filipino" + "\n" + \
                     "╠ " + key + "he : Hebrew" + "\n" + \
-                    "╚══[ Copyright @Zero-Cool404 ]" + "\n" + "\n\n" + \
-                    "Contoh : " + key + "tr-id Zero"
+                    "╚══[ Az-Har Muh. N ]" + "\n" + "\n\n" + \
+                    "Contoh : " + key + "tr-id Az-Har"
     return helpTranslate
 
 def clientBot(op):
@@ -583,19 +583,19 @@ def clientBot(op):
             print ("[ 5 ] NOTIFIED ADD CONTACT")
             if settings["autoAdd"] == True:
                 client.findAndAddContactsByMid(op.param1)
-            sendMention(op.param1, "Halo @!,terimakasih telah menambahkan saya sebagai teman :3")
+            sendMention(op.param1, "Halo @!, terimakasih telah menambahkan saya sebagai teman :3")
 
         if op.type == 13:
             print ("[ 13 ] NOTIFIED INVITE INTO GROUP")
             if clientMid in op.param3:
                 if settings["autoJoin"] == True:
                     client.acceptGroupInvitation(op.param1)
-                sendMention(op.param1, "Halo @!, Terimakasih Telah Mengundang Saya :3")
+                sendMention(op.param1, "Halo @!, terimakasih telah mengundang saya :3")
 
         if op.type in [22, 24]:
             print ("[ 22 And 24 ] NOTIFIED INVITE INTO ROOM & NOTIFIED LEAVE ROOM")
             if settings["autoLeave"] == True:
-                sendMention(op.param1, "Oi asw @!,ngapain invite saya")
+                sendMention(op.param1, "Hei @!, kok kamu invite aku..")
                 client.leaveRoom(op.param1)
 
         if op.type == 25:
@@ -746,7 +746,7 @@ def clientBot(op):
                                     client.sendMessage(msg.to, str(e))
 # Pembatas Script #
                             elif cmd == "crash":
-                                client.sendContact(to, "u1f41296217e740650e0448b96851a3e2',")
+                                client.sendContact(to, "u698de1ab0835ab29bce6f44d6bf1d21f',")
                             elif cmd.startswith("changename:"):
                                 sep = text.split(" ")
                                 string = text.replace(sep[0] + " ","")
@@ -1009,11 +1009,11 @@ def clientBot(op):
                                     for i in group.members[a*100 : (a+1)*100]:
                                         b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                                         s += 7
-                                        txt += u'@Zero \n'
+                                        txt += u'@Az-Har \n'
                                     client.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
                                     client.sendMessage(to, "Total {} Mention".format(str(len(nama))))  
                             elif cmd == "lurking on":
-                                tz = pytz.timezone("Asia/Makassar")
+                                tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
                                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
                                 hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
@@ -1655,7 +1655,7 @@ def clientBot(op):
                                 sendMention(at, str(ret_), [contact.mid])
                             del msg_dict[msg_id]
                         else:
-                            client.sendMessage(at,"SentMessage cancelled,But I didn't have log data.\nSorry > <")
+                            client.sendMessage(at,"SentMessage cancelled, But I didn't have log data.\nSorry > <")
                 except Exception as error:
                     logError(error)
                     traceback.print_tb(error.__traceback__)
